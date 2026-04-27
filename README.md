@@ -2,6 +2,9 @@
 
 An OpenGL 3.3 application that loads and renders a 3D model with dynamic point lighting. Built as part of a LearnOpenGL lab (Lab 10: Model Loading).
 
+<hr />
+<img width="802" height="625" alt="image" src="https://github.com/user-attachments/assets/0fd13f27-dbbf-44db-853d-b936b9f84ba6" />
+
 ## Features
 
 - 3D model loading via Assimp (`.obj` and other formats)
