@@ -3,10 +3,10 @@ project(app LANGUAGES C CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(GLFW_ROOT "/usr/local/lib/glfw")
-set(GLFW_BUILD "/usr/local/lib/glfw/build")
-set(GLAD_ROOT "/usr/local/lib/glad")
-set(ASSIMP_ROOT "/usr/local/lib/assimp")
+set(GLFW_ROOT "include/glfw")
+set(GLFW_BUILD "include/glfw/build")
+set(GLAD_ROOT "include/glad")
+set(ASSIMP_ROOT "include/assimp")
 
 find_package(OpenGL REQUIRED)
 
@@ -19,8 +19,8 @@ target_include_directories(app PRIVATE
 )
 
 target_link_libraries(app PRIVATE
-    ${GLFW_BUILD}/src/libglfw3.a
-    ${ASSIMP_ROOT}/bin/libassimp.so
+    ${CMAKE_SOURCE_DIR}/lib/libglfw3.a
+    ${CMAKE_SOURCE_DIR}/lib/libassimp.so
     OpenGL::GL
     X11
     Xrandr
@@ -29,5 +29,4 @@ target_link_libraries(app PRIVATE
     Xi
     pthread
     dl
-
 )
